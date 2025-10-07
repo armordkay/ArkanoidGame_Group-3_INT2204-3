@@ -4,6 +4,27 @@
  */
 public class Paddle extends MoveableObject{
     PowerUps currentPowerUp;
+    public Paddle () {
+        super();
+        this.currentPowerUp = null;
+    }
+
+    public Paddle (double x, double y, double width, double height, double dx) {
+        super(x, y, width, height, dx, 0);
+        this.currentPowerUp = null;
+    }
+
+    public PowerUps getCurrentPowerUp() {
+        return currentPowerUp;
+    }
+
+    public void setCurrentPowerUp(PowerUps currentPowerUp) {
+        this.currentPowerUp = currentPowerUp;
+    }
+
+
+
+
     @Override
     void move() {
 
