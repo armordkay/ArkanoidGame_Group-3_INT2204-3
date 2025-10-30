@@ -12,11 +12,20 @@ import javafx.scene.text.TextAlignment;
 public class Renderer {
     private GraphicsContext gc;
 
+    /**
+     * constructor.
+     * @param gc
+     */
     public Renderer(GraphicsContext gc) {
         this.gc = gc;
     }
 
+    /**
+     * contain all render screen logic.
+     * @param gameManager
+     */
     public void render(GameManager gameManager) {
+
         // Clear screen
         gc.setFill(Constants.BACKGROUND_COLOR);
         gc.fillRect(0, 0, Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT);
@@ -44,6 +53,11 @@ public class Renderer {
                 break;
         }
     }
+
+    /**
+     * game screen.
+     * @param gameManager
+     */
 
     private void renderGame(GameManager gameManager) {
         // Render bricks
@@ -86,6 +100,10 @@ public class Renderer {
                 Constants.WINDOW_WIDTH - 10, 25);
     }
 
+    /**
+     * Renders the main menu screen with game title, controls, and power-up descriptions.
+     */
+
     private void renderMenu() {
         gc.setFill(Color.WHITE);
         gc.setFont(Font.font("Arial", 60));
@@ -117,6 +135,10 @@ public class Renderer {
         }
     }
 
+    /**
+     * Renders a semi-transparent overlay with the "PAUSED" message.
+     */
+
     private void renderPauseOverlay() {
         gc.setFill(Color.rgb(0, 0, 0, 0.7));
         gc.fillRect(0, 0, Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT);
@@ -129,6 +151,11 @@ public class Renderer {
         gc.setFont(Font.font("Arial", 20));
         gc.fillText("Press P to Resume", Constants.WINDOW_WIDTH / 2.0, Constants.WINDOW_HEIGHT / 2.0 + 50);
     }
+
+    /**
+     * lose screen.
+     * @param scoreManager
+     */
 
     private void renderGameOver(ScoreManager scoreManager) {
         gc.setFill(Color.rgb(0, 0, 0, 0.8));
@@ -148,6 +175,11 @@ public class Renderer {
         gc.fillText("Press SPACE to Try Again", Constants.WINDOW_WIDTH / 2.0, 420);
         gc.fillText("Press ESC for Menu", Constants.WINDOW_WIDTH / 2.0, 450);
     }
+
+    /**
+     * win screen.
+     * @param scoreManager
+     */
 
     private void renderLevelComplete(ScoreManager scoreManager) {
         gc.setFill(Color.rgb(0, 0, 0, 0.8));

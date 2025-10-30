@@ -4,6 +4,7 @@ public class InputHandler {
     private GameManager gameManager;
 
     public InputHandler(GameManager gameManager) {
+        
     }
 
     public void handleKeyPressed(KeyEvent event) {}
