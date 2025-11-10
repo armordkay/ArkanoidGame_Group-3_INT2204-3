@@ -61,4 +61,5 @@ Members:
 
 Class diagram: 
 
-<img width="4158" height="10282" alt="diagram" src="https://github.com/user-attachments/assets/73f0a64f-1f67-40ca-9e67-d9fbdfac0e64" />
+<img width="4612" height="10808" alt="diagram" src="https://github.com/user-attachments/assets/522e1a13-2a5b-44e2-9f29-815ee90bc29f" />
+
